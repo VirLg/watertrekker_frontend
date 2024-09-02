@@ -4,7 +4,7 @@ import "./App.css";
 import NotFound from "./pages/notFound/NotFound";
 import Layout from "./components/layout/Layout";
 
-import SignIn from "./autorisation/signIn/SignIn";
+import SignIn from "./authorization/signIn/SignIn";
 import MainPage from "./pages/mainPage/MainPage";
 function App() {
   return (
