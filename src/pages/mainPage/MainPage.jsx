@@ -1,32 +1,43 @@
 import React from "react";
-
+import bg from "../../images/svg/bg_main_deck.svg";
+import mp_right from "../../images/svg/mp_right.svg";
+import mp_left_one from "../../images/svg/mp_left_one.svg";
+import mp_left_two from "../../images/svg/mp_left_two.svg";
 const MainPage = () => {
   return (
     <div className="container">
-      <div className="flex justify-between ml-auto mr-auto w-[1014px]">
-        <div>
-          <h1>Water consumption tracker</h1>
-          <h3>Record daily water intake and track</h3>
-          <h4>Tracker Benefits</h4>
-          <ul>
-            <li>Habit drive</li>
-            <li>View statistics</li>
-            <li>Personal rate setting</li>
-          </ul>
+      {/* justify-between */}
+      <div
+        className="flex justify-between ml-auto mr-auto w-[1014px] h-[582px] "
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "0% 100%",
+        }}>
+        <div className="w-[100%] h-[100%]">
+          <div
+            className="pt-[80px] h-[90px]"
+            style={{
+              backgroundImage: `url(${mp_left_one})`,
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "10% 10%",
+            }}></div>
+          <div
+            className="pt-[80px]  w-[100%] h-[100%]"
+            style={{
+              backgroundImage: `url(${mp_left_two})`,
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "10% 10%",
+            }}></div>
         </div>
-
-        <div>
-          <h3>Why drink water</h3>
-          <ul>
-            <li>Supply of nutrients to all organs</li>
-            <li>Providing oxygen to the lungs</li>
-            <li>Maintaining the work of the heart</li>
-            <li>Release of processed substances</li>
-            <li>Ensuring the stability of the internal environment</li>
-            <li>Maintaining within the normal temperature</li>
-            <li>Maintaining an immune system capable of resisting disease</li>
-          </ul>
-        </div>
+        <div
+          className="pt-[80px] w-[100%] h-[100%]"
+          style={{
+            backgroundImage: `url(${mp_right})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "70% 10%",
+          }}></div>
       </div>
     </div>
   );
