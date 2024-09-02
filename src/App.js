@@ -1,17 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Logo from "./components/pages/logo/Logo";
-import NotFound from "./components/pages/notFound/NotFound";
+
+import NotFound from "./pages/notFound/NotFound";
 import Layout from "./components/layout/Layout";
-import Home from "./components/pages/home/Home";
+
+import SignIn from "./autorisation/signIn/SignIn";
+import MainPage from "./pages/mainPage/MainPage";
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Logo />} />
-          <Route path="/home" element={<Home />} />
+          <Route index element={<MainPage />} />
+          <Route path="/signIn" element={<SignIn />} />
         </Route>
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
