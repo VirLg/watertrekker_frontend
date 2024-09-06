@@ -9,7 +9,7 @@ const SignIn = () => {
         <input type="text" />
         <input type="text" />
       </ul>
-      <button className="ml-4  border-2 p-2 m-1 rounded-md">Sign In</button>
+      <button>Sign In</button>
     </div>
   );
 };
