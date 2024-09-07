@@ -1,33 +1,38 @@
 import React from "react";
 import {
-  MPDiv,
-  ContainerDiv,
-  LeftContainerOneDiv,
-  LeftContainerTwoDiv,
+  MainContainerDiv,
+  LeftContainerDiv,
+  MPContent,
+  MPTitle,
   RightContainerDiv,
+  BGimg,
 } from "./MainPage.styled";
-
+import pic_1_mobile from "../../images/svg/pic_1_mobile.svg";
 import mp_right from "../../images/svg/mp_right.svg";
-import mp_left_one from "../../images/svg/mp_left_one.svg";
-import mp_left_two from "../../images/svg/mp_left_two.svg";
+
 const MainPage = () => {
   return (
-    <ContainerDiv className="container">
-      {/* justify-between */}
+    <MainContainerDiv className="container">
+      <div>
+        <LeftContainerDiv>
+          <MPTitle>Water consumption tracker</MPTitle>
+          <MPContent>Record daily water intake and track</MPContent>
+        </LeftContainerDiv>
 
-      <div className=" mt-[31px] ">
-        <LeftContainerOneDiv>
-          <img src={mp_left_one} alt="" />
-        </LeftContainerOneDiv>
-        <LeftContainerTwoDiv>
-          <img src={mp_left_two} alt="" />
-        </LeftContainerTwoDiv>
         <button className="button_one">Try tracker</button>
       </div>
       <RightContainerDiv>
-        <img src={mp_right} alt="" />
+        <picture>
+          <source srcSet={mp_right} media="(min-width: 1404px)" />
+          <source
+            srcSet={mp_right}
+            media="(max-width: 1403px) and (min-width: 768px)"
+          />
+          <source srcSet={pic_1_mobile} media="(max-width: 767px)" />
+          <BGimg src={mp_right} alt="Decorative element of the right section" />
+        </picture>
       </RightContainerDiv>
-    </ContainerDiv>
+    </MainContainerDiv>
   );
 };
 

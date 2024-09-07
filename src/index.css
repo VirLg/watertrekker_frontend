@@ -39,11 +39,9 @@ code {
 }
 
 .button_one {
-  width: 384px;
-  height: 44px;
   top: 130px;
   left: 40px;
-  padding: 10px 30px 10px 30px;
+
   gap: 10px;
   border-radius: 10px;
   opacity: 0px;
@@ -53,6 +51,24 @@ code {
   font-weight: 500;
   line-height: 24px;
   text-align: center;
+  @media screen and (min-width: 1404px) {
+    width: 384px;
+    height: 44px;
+    padding: 10px 30px 10px 30px;
+  }
+  @media (max-width: 1403px) {
+    width: 336px;
+    height: Hug (44px) px;
+    padding: 10px 30px 10px 30px;
+  }
+  @media (max-width: 767px) {
+    width: 280px;
+    height: 36px;
+    font-family: Roboto;
+    font-size: 16px;
+    padding: 8px 30px 8px 30px;
+    line-height: 20px;
+  }
 }
 .div {
 }
