@@ -5,6 +5,7 @@ import pic_2_mobile from "../../images/svg/pic_2_mobile.svg";
 import pic_2_tablet from "../../images/svg/pic_2_tablet.svg";
 import pic_3_tablet from "../../images/svg/pic_3_tablet.svg";
 import mp_left_two from "../../images/svg/mp_left_two.svg";
+import marker from "../../images/svg/marker.svg";
 
 export const MPTitle = styled.h1`
   font-family: Roboto;
@@ -76,51 +77,51 @@ export const LeftContainerDiv = styled.div`
   }
 `;
 
-// export const RightContainerDiv = styled.div`
-//   width: 494px;
-//   height: 330px;
-//   margin-top: 58px;
-//   margin-left: 81px;
-// `;
-// export const RightContainerDiv = styled.div`
-//   //   width: 100%;
-//   //   height: 100%;
-//   //   outline: 1px solid blue;
-//   //   background-repeat: no-repeat;
-//   //   background-size: contain;
-
-//   //   @media screen and (min-width: 1404px) {
-//   //     background-image: url(${mp_right});
-//   //     height: 332px;
-//   //   }
-//   //   @media (max-width: 1403px) {
-//   //     background-image: url(${mp_right});
-//   //     height: 332px;
-//   //   }
-//   //   @media (max-width: 767px) {
-//   //     background-image: url(${pic_1_mobile});
-//   //     height: 416px;
-//   //   }
-// `;
 export const RightContainerDiv = styled.div`
   @media screen and (min-width: 1404px) {
   }
   @media (max-width: 1403px) {
+    margin-left: 0px;
+    padding_left: 0px;
   }
   @media (max-width: 767px) {
     margin-top: 40px;
   }
 `;
-
-export const BGimg = styled.img`
+export const RightContantDiv = styled.div`
+  gap: 12px;
+  width: 100%;
   border-radius: 10px;
   opacity: 0px;
+  // background-color: rgba(236, 242, 255, 1);
+
+  @media screen and (min-width: 1404px) {
+  }
   @media (max-width: 1403px) {
     width: 494px;
-    height: 332px;
+    height: auto;
   }
   @media (max-width: 767px) {
-    width: 100%;
-    height: auto;
+    width: 280px;
+    height: 416px;
+    // padding: 24px 16px 24px 16px;
+  }
+`;
+export const ListItem = styled.li`
+  list-style: none;
+  display: inline-flex;
+  align-items: baseline;
+  font-size: 16px;
+  text-wrap: wrap;
+  &::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+
+    background-image: url(${marker});
+    background-repeat: no-repeat;
+    background-size: content;
+    background-position: left;
+    margin-right: 16px;
   }
 `;
