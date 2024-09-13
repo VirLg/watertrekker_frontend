@@ -6,6 +6,9 @@ import pic_2_tablet from "../../images/svg/pic_2_tablet.svg";
 import pic_3_tablet from "../../images/svg/pic_3_tablet.svg";
 import mp_left_two from "../../images/svg/mp_left_two.svg";
 import marker from "../../images/svg/marker.svg";
+import vectorA from "../../images/svg/vectorA.svg";
+import vectorB from "../../images/svg/vectorB.svg";
+import vectorC from "../../images/svg/vectorC.svg";
 
 export const MPTitle = styled.h1`
   font-family: Roboto;
@@ -33,24 +36,24 @@ export const MPContent = styled.h3`
 `;
 
 export const MainContainerDiv = styled.div`
-  background-image: url(${bg}), url(${boolb_mp});
-  background-size: contain;
+  // background-size: contain;
   background-repeat: no-repeat;
   background-position-x: left;
   background-position-y: bottom;
   @media screen and (min-width: 1404px) {
-    margin-top: 49px;
     display: flex;
   }
 
   @media (max-width: 1403px) {
-    margin-top: 40px;
-    background-image: url(${pic_3_tablet});
+    // background-image: url(${pic_3_tablet});
   }
   @media (max-width: 767px) {
     display: block;
   }
-  margin-top: 49px;
+  background-image: url(${vectorC}), url(${vectorA}), url(${vectorB});
+  padding-top: 49px;
+  display: block;
+  padding-bottom: 40px;
 `;
 
 export const LeftContainerDiv = styled.div`
@@ -89,7 +92,6 @@ export const RightContainerDiv = styled.div`
   }
 `;
 export const RightContantDiv = styled.div`
-  gap: 12px;
   width: 100%;
   border-radius: 10px;
   opacity: 0px;
@@ -102,8 +104,12 @@ export const RightContantDiv = styled.div`
     height: auto;
   }
   @media (max-width: 767px) {
-    width: 280px;
-    height: 416px;
+    width: 248px;
+    height: 368px;
+    background-color: rgba(236, 242, 255, 1);
+    outline: 1px solid green;
+    padding: 24px 16px;
+
     // padding: 24px 16px 24px 16px;
   }
 `;
@@ -111,8 +117,16 @@ export const ListItem = styled.li`
   list-style: none;
   display: inline-flex;
   align-items: baseline;
-  font-size: 16px;
+
   text-wrap: wrap;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
   &::before {
     content: "";
     width: 14px;
